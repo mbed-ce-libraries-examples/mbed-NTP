@@ -7,7 +7,14 @@ By leveraging the NTP protocol, these libraries enable devices to maintain preci
 1. Create a new project according to [MbedCE instructions](https://github.com/mbed-ce/mbed-os/wiki)
 2. Add this as submodule to your project via `git submodule add --depth 1 https://github.com/mbed-ce-libraries-examples/mbed-NTP mbed-NTP`
 3. The top level `CMakeList.txt` (in root of your project) should be modified according to [this wiki page](https://github.com/mbed-ce/mbed-os/wiki/MbedOS-configuration#libraries-in-your-application)
-4. Build the project
+   ```
+   #[[link MbedOS and its libraries (necessary everytime)]]
+   target_link_libraries(${CMAKE_PROJECT_NAME}  mbed-os mbed-netsocket) 
+
+   ### link user library (if needed)
+   target_link_libraries(${CMAKE_PROJECT_NAME} mbed-ntp)
+   ```
+5. Build the project
 
 ### Status:
 This library is not tested yet.
