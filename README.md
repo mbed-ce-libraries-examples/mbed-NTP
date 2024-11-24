@@ -14,6 +14,7 @@ By leveraging the NTP protocol, these libraries enable devices to maintain preci
    ### link user library (if needed)
    target_link_libraries(${CMAKE_PROJECT_NAME} mbed-ntp)
    ```
+4. Make your program
 5. Build the project
 
 ### Status:
